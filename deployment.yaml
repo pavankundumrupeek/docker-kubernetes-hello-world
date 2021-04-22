@@ -2,8 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world
+  labels:
+    app: hello-world
 spec:
   replicas: 1 
+  selector:
+    matchLabels:
+      app: hello-world
   template:
     metadata:
       labels:
@@ -11,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-world-pod
-        image: arungupta/helloworld-spring-boot:latest
+        image: asia.gcr.io/groupnexus-poc-285411/hello:v1
         ports: 
         - containerPort: 80
         - containerPort: 443
