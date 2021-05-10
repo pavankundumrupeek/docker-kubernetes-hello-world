@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-world-pod
-        image: asia.gcr.io/groupnexus-poc-285411/java-cicd:v1
+        image: asia.gcr.io/groupnexus-poc-285411/java-cicd
         ports: 
         - containerPort: 80
         - containerPort: 443
